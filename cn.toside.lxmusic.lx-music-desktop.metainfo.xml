@@ -21,6 +21,7 @@
   <screenshots>
     <screenshot type="default">
       <image type="source">https://raw.githubusercontent.com/lyswhut/lx-music-desktop/refs/tags/v2.11.0/doc/images/app.png</image>
+      <caption>Main Window</caption>
     </screenshot>
   </screenshots>
   <categories>
@@ -34,4 +35,9 @@
     <release version="2.11.0" date="2025-05-01"/>
   </releases>
   <content_rating type="oars-1.1"/>
+  <keywords>
+    <keyword>music player</keyword>
+    <keyword>offline music playback</keyword>
+    <keyword>linux desktop application</keyword>
+  </keywords>
 </component>
