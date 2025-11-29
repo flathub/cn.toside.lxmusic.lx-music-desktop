@@ -32,30 +32,31 @@ modules:
     sources:
       - type: file
         only-arches: [x86_64]
-        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.11.0/lx-music-desktop_2.11.0_amd64.deb
-        sha256: e97805dfa77450d7ae5423987174148d7ee960e5a7562dfc7f9dc58eb74b94d1
+        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.0/lx-music-desktop_2.12.0_amd64.deb
+        sha256: 49a603ee351ccdaa3c62cb20daca965631d18382a0e42b59e041214c7aa45895
         x-checker-data:
           type: json
           url: https://api.github.com/repos/lyswhut/lx-music-desktop/releases/latest
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
-          url-query: .assets[] | select(.name=="lx-music-desktop_" + $version + "_amd64.deb") | .browser_download_url
+          url-query: .assets[] | select(.name=="lx-music-desktop_" + $version + "_amd64.deb")
+            | .browser_download_url
           timestamp-query: .published_at
       - type: file
         only-arches: [aarch64]
-        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.11.0/lx-music-desktop_2.11.0_arm64.deb
-        sha256: 4bd24ffb628d6a6582a2c413e0577772a508ec0a2e190e90b3ddbea1a390cf07
+        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.0/lx-music-desktop_2.12.0_arm64.deb
+        sha256: acfdd937a39c83221a884f1e898d77cd09be45fcc35d7dbad66d7018de38e861
         x-checker-data:
           type: json
           url: https://api.github.com/repos/lyswhut/lx-music-desktop/releases/latest
           tag-query: .tag_name
           version-query: $tag | sub("^v"; "")
-          url-query: .assets[] | select(.name=="lx-music-desktop_" + $version + "_arm64.deb") | .browser_download_url
+          url-query: .assets[] | select(.name=="lx-music-desktop_" + $version + "_arm64.deb")
+            | .browser_download_url
           timestamp-query: .published_at
       - type: script
         dest-filename: run.sh
         commands:
-          - exec zypak-wrapper /app/lx-music-desktop/lx-music-desktop
-            "$@"
+          - exec zypak-wrapper /app/lx-music-desktop/lx-music-desktop "$@"
       - type: file
         path: cn.toside.lxmusic.lx-music-desktop.metainfo.xml
