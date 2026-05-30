@@ -12,9 +12,12 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --filesystem=xdg-music
   - --device=dri
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --own-name=org.mpris.MediaPlayer2.chromium.instance2
 modules:
   - name: lx-music-desktop
     buildsystem: simple
