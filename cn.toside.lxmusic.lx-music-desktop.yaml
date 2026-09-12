@@ -35,8 +35,8 @@ modules:
     sources:
       - type: file
         only-arches: [x86_64]
-        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop_2.12.2_amd64.deb
-        sha256: 20aad8692b4916e66a78ee38ff213bcf2095df5f534859a93dd573b096912c92
+        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.3/lx-music-desktop_2.12.3_amd64.deb
+        sha256: 3ce134b698f002b090248fab92a3e7b60324be8bdcf91572460fbe7e349c35e1
         x-checker-data:
           type: json
           url: https://api.github.com/repos/lyswhut/lx-music-desktop/releases/latest
@@ -47,8 +47,8 @@ modules:
           timestamp-query: .published_at
       - type: file
         only-arches: [aarch64]
-        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.2/lx-music-desktop_2.12.2_arm64.deb
-        sha256: fa653b2cb6b7b1d17f0a41b5a72a626956fd88ca45e5acaed4196337ba38e4bd
+        url: https://github.com/lyswhut/lx-music-desktop/releases/download/v2.12.3/lx-music-desktop_2.12.3_arm64.deb
+        sha256: dcec0a07b63f2d817370e88133a93ffc52b577d607f1d10962d075063e42d0ec
         x-checker-data:
           type: json
           url: https://api.github.com/repos/lyswhut/lx-music-desktop/releases/latest
